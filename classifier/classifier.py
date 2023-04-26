@@ -108,9 +108,9 @@ def main():
             epoch_syn_val_acc.append(syn_val_acc)
             epoch_cifar10_val_acc.append(cifar10_val_acc)
 
-    print('At the end of: {} epochs | Train accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(train_dataset.size(0)), float(epoch_train_acc[-1])))
-    print('At the end of: {} epochs | Validation accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(syn_val_dataset.size(0)), float(epoch_syn_val_acc[-1])))
-    print('At the end of: {} epochs | Validation accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(cifar10_val_dataset.size(0)), float(epoch_cifar10_val_acc[-1])))
+    print('At the end of: {} epochs | Train accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(len(train_dataset.size)), float(epoch_train_acc[-1])))
+    print('At the end of: {} epochs | Validation accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(len(syn_val_dataset.size)), float(epoch_syn_val_acc[-1])))
+    print('At the end of: {} epochs | Validation accuracy of the model on the: {} images: {} %'.format(int(args.epochs) ,int(len(cifar10_val_dataset.size)), float(epoch_cifar10_val_acc[-1])))
 
 if __name__ == '__main__':
     main()
