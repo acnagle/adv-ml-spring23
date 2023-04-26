@@ -20,14 +20,3 @@ def seed_everything(seed):
 def dummy_filter(images, **kwargs):
     return images, False
 
-def load_image(path, resample=False, size=(224, 224), mode='bicubic', antialias=False):
-    img = ToTensor()(Image.open(path))
-    if resample:
-        img = img = F.interpolate(
-            img.view(1, img.shape[0], img.shape[1], img.shape[2]),
-            size=size,
-            mode=mode,
-            antialias=antialias
-        )
-
-    return img
