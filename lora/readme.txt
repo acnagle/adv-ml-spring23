@@ -1,1 +1,0 @@
-Note: the primary reason we are interested in lora over db+lora is that we code available to us that can train the text encoder. The db lora code will not train the text encoder. I believe (based on some results from other projects) that this will enable better learning of the cars
